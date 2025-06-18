@@ -2,48 +2,212 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Chic</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT Official</title>
+  <style>
+    /* 基本リセット */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* ボディ全体の設定 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #E1E1E1;
+      line-height: 1.6;
+    }
+    
+    /* ヘッダー設定 */
+    header {
+      background-color: #1E1E1E;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    /* ナビゲーションメニュー */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    nav ul li a {
+      color: #E1E1E1;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #00BCD4;
+    }
+    
+    /* ヒーローセクション */
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #232526, #414345);
+    }
+    
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .hero p {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    
+    /* メインコンテナ */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    /* セクションタイトル */
+    .section-title {
+      font-size: 2em;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+    
+    /* カード型レイアウト */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .card {
+      background-color: #1E1E1E;
+      padding: 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s;
+      border-radius: 5px;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    
+    /* フッター */
+    footer {
+      background-color: #1E1E1E;
+      padding: 20px;
+      text-align: center;
+      color: #9E9E9E;
+      font-size: 0.9em;
+    }
+    
+    footer a {
+      color: #00BCD4;
+      text-decoration: none;
+    }
+    
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- ヘッダー -->
   <header>
-    <h1>Neon Chic</h1>
+    <h1>IT Official</h1>
     <nav>
       <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#about">アバウト</a></li>
-        <li><a href="#contact">コンタクト</a></li>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#about">概要</a></li>
+        <li><a href="#news">ニュース</a></li>
+        <li><a href="#contact">連絡先</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="home">
-      <h2>Welcome to the Neon World</h2>
-      <p>
-        最先端のネオンアートが輝く世界へようこそ。夜のシティライフを感じさせるクールなデザインで、あなたの日常に刺激を。
-      </p>
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <h2>未来を創造するITソリューション</h2>
+    <p>最先端技術と革新的なアイデアで、ビジネスの未来を切り開きます。</p>
+  </section>
+
+  <!-- メインコンテンツ -->
+  <div class="container">
+    <!-- サービスセクション -->
+    <section id="services">
+      <h2 class="section-title">サービス</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>ソフトウェア開発</h3>
+          <p>高度な技術で業務に最適なソリューションを提供します。</p>
+        </div>
+        <div class="card">
+          <h3>クラウドソリューション</h3>
+          <p>安全で拡張性の高いインフラストラクチャを構築します。</p>
+        </div>
+        <div class="card">
+          <h3>デジタルトランスフォーメーション</h3>
+          <p>最新技術を取り入れた企業改革を促進します。</p>
+        </div>
+      </div>
     </section>
 
+    <!-- 企業概要セクション -->
     <section id="about">
-      <h2>About This Site</h2>
+      <h2 class="section-title">概要</h2>
       <p>
-        このサイトはHTMLとCSSだけで作成され、未来感溢れるネオンの輝きを表現しています。シンプルながらも印象的なデザインをお楽しみください。
+        当社はIT業界における革新を求め、先進技術と豊富な知識でソリューションを提供しています。
+        お客様のビジネスに合わせた最適な戦略を立案し、実行に移すことで業界の最前線を走り続けています。
       </p>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        ご質問やフィードバックがございましたら、ぜひこちらからご連絡ください。あなたの声がさらなる煌めきを生み出します！
-      </p>
+    <!-- ニュースセクション -->
+    <section id="news">
+      <h2 class="section-title">最新ニュース</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>新製品リリースのお知らせ</h3>
+          <p>最新技術を盛り込んだ新製品が近日発売予定です。詳細は公式サイトでご確認ください。</p>
+        </div>
+        <div class="card">
+          <h3>業界イベントへの参加</h3>
+          <p>国内外の主要ITカンファレンスに参加し、新たなパートナーシップを模索しています。</p>
+        </div>
+      </div>
     </section>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Neon Chic. All rights reserved.</p>
+  <!-- フッター -->
+  <footer id="contact">
+    <p>
+      お問い合わせ: <a href="mailto:info@itofficial.com">info@itofficial.com</a>
+    </p>
+    <p>&copy; 2025 IT Official. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
